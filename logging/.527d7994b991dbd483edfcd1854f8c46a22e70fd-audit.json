@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\ProgramHrd\\logging\\.527d7994b991dbd483edfcd1854f8c46a22e70fd-audit.json",
+    "files": [
+        {
+            "date": 1725954460984,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-10-14.log",
+            "hash": "3c339d02e9b04c0d6a2af52d7422dabc15acfc5f3d4654bbe1ccf5b2f321622b"
+        },
+        {
+            "date": 1725955370572,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-10-15.log",
+            "hash": "c31faa2d566d5acae195406ba5135990ffcf8a935dd60f676f24445a9a7f2f1d"
+        },
+        {
+            "date": 1726018581954,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-08.log",
+            "hash": "18d451bbbeda3dc2981e265ad0d182e3abead6aac89508b50f88efd90138e5ec"
+        },
+        {
+            "date": 1726026472970,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-10.log",
+            "hash": "2978d389add5790ac16e0f5a670a1d42b9cca2b4f7608c100a56fea9df321d1c"
+        },
+        {
+            "date": 1726027429279,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-11.log",
+            "hash": "e9722a9df0a6f683d244ab4b87e17802a4f0dde268a31eab47d8cf140c991f44"
+        },
+        {
+            "date": 1726041056894,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-14.log",
+            "hash": "ab8d770e60256557d04e12d0eb0f3fc81fb46b51f0f989bd21379b0e60aa62e6"
+        },
+        {
+            "date": 1726041879545,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-15.log",
+            "hash": "84671bc09aab91976d4835c895db092adfdf21cfc0f5303d2887e0683b5c5886"
+        }
+    ],
+    "hashType": "sha256"
+}
