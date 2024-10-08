@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script defer src="../public/fetchRequest.js"></script>
+    <title>Aplikasi Manajemen Inventaris</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <p id="message"></p>
-    
+    <div class="container">
+        <h1>Aplikasi Manajemen Inventaris</h1>
+        
+        <form id="itemForm">
+            <input type="text" id="itemName" placeholder="Nama Barang" required>
+            <input type="number" id="itemQuantity" placeholder="Jumlah" required>
+            <select id="transactionType">
+                <option value="in">Masuk</option>
+                <option value="out">Keluar</option>
+            </select>
+            <button type="submit">Tambah Item</button>
+        </form>
+
+        <div id="inventoryStatus" class="status"></div>
+
+        <h2>Daftar Inventaris</h2>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

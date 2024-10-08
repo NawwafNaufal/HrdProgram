@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Ramabhadra&display=swap');
+
+/* Container utama untuk slide-up form */
+
+.slide-up-form {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    margin-left: 120px;
+    margin-right: -80px;
+    max-height: 95vh;
+    overflow-y: auto;
+    max-width:1300px;
+    opacity: 0;
+    -webkit-transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -moz-transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -ms-transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -o-transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Class ketika form aktif/muncul */
+.slide-up-form.active {
+    bottom: 0; /* Form muncul ke posisi terlihat */
+    opacity: 1; /* Form terlihat bersamaan */
+    transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transisi smooth */
+}
+
+/* Animasi untuk form container */
+.employee-form-container {
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(100%); /* Mulai dari luar layar */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animasi smooth pada transform dan opacity */
+}
+
+/* Ketika form aktif, munculkan form */
+.slide-up-form.active .employee-form-container {
+    opacity: 1; /* Form sepenuhnya terlihat */
+    transform: translateY(0); /* Geser ke posisi normal */
+}
+
+/* Menambahkan class slide-down untuk menutup */
+.slide-down {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Styling untuk elemen lainnya */
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-family: 'Poltawski Nowy';
+    margin-bottom: 3px;
+}
+.option-file{
+    font-family: 'Poltawski Nowy';
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+*::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Edge */
+}
+.section-divider {
+    width: 100%; /* Sesuaikan panjang garis sesuai kebutuhan */
+    margin-left: -0; /* Mengatur margin kiri menjadi 0 */
+    margin-top: 10px; /* Jarak atas */
+    margin-bottom: 20px; /* Jarak bawah */
+    border: none; /* Menghilangkan border default */
+    height: 1px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+}
+.section-title{
+    font-family: 'Poltawski Nowy';
+}
+.label-alamat {
+    height: 140px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    width: 100%;
+    resize: vertical;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+}
+
+.label-alamat:focus {
+    border-color: #007bff; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+.form-control{
+    height: 45px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+}
+.col-md-6 {
+
+}
+.form-select{
+    height: 45px;
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Poltawski Nowy';
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+}
+.back-button{
+}
+.backgorund-input{
+    margin-top: -20px;
+    height: 740px;
+}
+.nama-back{
+    font-family: 'Poltawski Nowy';
+    background-color: white;
+    border-color: #ccc;
+    width: 90px;
+    margin-top: -20px;
+}
+.arrow-back{
+    size: 20px;
+}
+.submit-button{
+    font-family: 'Poltawski Nowy';
+    background-color: #222222;
+    width: 90px;
+    margin-top: -20px;
+}
+.judul-form{
+    font-family: 'Poltawski Nowy';
+}

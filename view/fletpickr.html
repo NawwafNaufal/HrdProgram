@@ -10,40 +10,43 @@
 <body>
     <h1>Employee Form</h1>
     <form id="employee-form">
+        <label for="nik">Nik:</label>
+        <input type="text" id="nik" name="nik" required><br>
         <label for="nama_karyawan">Nama Karyawan:</label>
         <input type="text" id="nama_karyawan" name="nama_karyawan" required><br>
-
-        <label for="nik">NIK:</label>
-        <input type="text" id="nik" name="nik" required><br>
-
         <label for="jenis_kelamin">Jenis Kelamin:</label>
-        <input type="text" id="jenis_kelamin" name="jenis_kelamin" required><br>
-
+        <select name="jenis_kelamin" id="jenis_kelamin">
+            <option value="Laki-Laki">Jantan</option>
+            <option value="Perempuan">Betina</option>
+        </select>
+        <br>
         <label for="pendidikan">Pendidikan:</label>
         <input type="text" id="pendidikan" name="pendidikan" required><br>
-
-        <label for="tanggal_masuk">Tanggal Masuk:</label>
-        <input type="text" id="tanggal_masuk" name="tanggal_masuk" placeholder="Select Date" required><br>
-
+        
+        <label for="id_status">Status:</label>
+        <select name="id_status" id="id_status">
+            <option value="S001">Menikah</option>
+            <option value="S002">Belum Menikah</option>
+            <option value="S003">K/1</option>
+            <option value="S004">K/2</option>
+            <option value="S005">K/3</option>
+        </select>
+        <br>
         <label for="tanggal_lahir">Tanggal Lahir:</label>
         <input type="text" id="tanggal_lahir" name="tanggal_lahir" placeholder="Select Date" required><br>
-
-        <label for="id_status">ID Status:</label>
-        <input type="number" id="id_status" name="id_status" required><br>
-
-        <label for="awal_kontrak">Awal Kontrak:</label>
-        <input type="text" id="awal_kontrak" name="awal_kontrak" placeholder="Select Date" required><br>
-
-        <label for="akhir_kontrak">Akhir Kontrak:</label>
-        <input type="text" id="akhir_kontrak" name="akhir_kontrak" placeholder="Select Date" required><br>
-
+        
         <label for="alamat">Alamat:</label>
         <textarea id="alamat" name="alamat" required></textarea><br>
-
+        <label for="no_hp">No Hp:</label>
+        <input type="text" id="no_hp" name="no_hp" required><br>
+        <br>
+        <label for="usia">Usia:</label>
+        <input type="text" id="usia" name="usia" required><br>
+        <label for="asal">Asal:</label>
+        <input type="text" id="asal" name="asal" required><br>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
-
     <script src="../public/fetchForm.js" defer></script>
 </body>
 </html>

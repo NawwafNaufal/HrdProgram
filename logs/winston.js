@@ -9,7 +9,7 @@ const dailyRotateFileTransport = new winstonDaily({
     filename: `${logDir}/application-%DATE%.log`, 
     datePattern: 'YYYY-MM-DD-HH',
     zippedArchive: true,
-    maxSize: '20m',
+    maxSize: '30m',
     maxFiles: '14d'
 });
 

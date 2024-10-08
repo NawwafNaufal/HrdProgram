@@ -1,0 +1,249 @@
+/* General styling for container */
+.document-container {
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poltawski Nowy';
+    background-color: #fff;
+  }
+  
+  .document-title {
+    font-size: 36px;
+    margin-right: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Styling for cards (forms and file preview) */
+  .form-card, .file-preview-card {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    height: 710px !important;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  
+  .form-header {
+    background-color: #fff !important;
+    font-size: 19px;
+    margin-top: -10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-file {
+    margin-right: 10px;
+  }
+  
+  /* Form field styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  
+  /* Submit button */
+  .submit-btn {
+    width: 90px;
+    margin-left: 269px;
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+  }
+  .descrip-name{
+    font-weight: bold;
+    color: #222222 !important;
+  }
+  .submit-btn-2 {
+    width: 90px;
+    margin-left: 269px;
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .submit-btn:hover {
+    background-color: #495057;
+  }
+  
+  .file-preview-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .file-preview-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .file-preview-card p {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  .garis-pdf{
+    border-top: '2px solid #000'; 
+    margin: '20px 0'
+  }
+.pre-view{
+    text-align: left;
+}
+.arr-name{
+   font-size: 18px !important;
+   color: #222222;
+   font-family: 'Poltawski Nowy';
+}
+.arr-name span {
+    margin-right: 8px;
+}
+.button-save{
+    font-size: 35px;
+    color: #222222;
+}
+.save-2 {
+    margin-left: 118px;
+}
+.edit-pen{
+    margin-left: 119px;
+}
+  input:focus,
+  textarea:focus,
+  select:focus {
+    font-family: 'Poltawski Nowy';
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #222222 !important; 
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  /* @keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        -o-transform: translateY(50px);
+}
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+
+.form-card, .file-preview-card {
+    animation: slideUp 0.6s ease-out;
+    -webkit-animation: slideUp 0.6s ease-out;
+}
+
+
+.form-card, .file-preview-card {
+    animation-delay: 0.1s; 
+} */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi */
+/* Pdf.css */
+
+/* Aturan untuk animasi scale dan rotate */
+/* Pdf.css */
+
+/* Aturan untuk animasi flip 3D */
+/* Pdf.css */
+
+/* Aturan untuk animasi bounce dan fade */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(30px); /* Mulai dari bawah */
+        opacity: 0; /* Mulai dari transparan */
+    }
+    50% {
+        transform: translateY(-15px); /* Melompat sedikit ke atas */
+        opacity: 1; /* Menjadi terlihat */
+    }
+    100% {
+        transform: translateY(0); /* Berakhir pada posisi normal */
+        opacity: 1; /* Menjadi terlihat sepenuhnya */
+    }
+}
+
+/* Terapkan animasi pada card dengan delay yang berbeda */
+.form-card, .file-preview-card {
+    animation: bounceIn 0.6s ease forwards; /* Durasi 0.6 detik */
+}
+
+/* Card Kanan (Form Kontrak Kerja) */
+.form-card:last-child {
+    animation-delay: 0s; /* Tanpa penundaan untuk card kanan */
+}
+
+/* Card Tengah (File Preview) */
+.file-preview-card {
+    animation-delay: 0.2s; /* Penundaan untuk card tengah */
+}
+
+/* Card Kiri (Form Surat Panggilan) */
+.form-card:first-child {
+    animation-delay: 0.4s; /* Penundaan untuk card kiri */
+}
+
+
+
+
+

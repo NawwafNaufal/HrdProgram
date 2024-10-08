@@ -1,25 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    flatpickr("#tanggal_masuk", {
-        dateFormat: "Y-m-d"
-    });
     flatpickr("#tanggal_lahir", {
         dateFormat: "Y-m-d"
     });
-    flatpickr("#awal_kontrak", {
-        dateFormat: "Y-m-d"
-    });
-    flatpickr("#akhiri_kontrak", {
-        dateFormat: "Y-m-d"
-    });
-
     document.getElementById('employee-form').addEventListener('submit', async function(event) {
         event.preventDefault();
 
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
 
+        console.log('Form data:', data);
+
         try {
-            const response = await fetch('http://localhost:4000/FromEmployee', {
+            const response = await fetch('http://localhost:4000/PersonalData', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

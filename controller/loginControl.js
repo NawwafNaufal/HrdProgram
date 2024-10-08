@@ -7,7 +7,6 @@ const logger = require("../logs/winston")
 const keytoken = process.env.JWT_KEY
 const loginControl = async(req,res) => {
     const {username,password} = req.body
-    try {
         const [result] = await login.loginDb(username,password)
         const cekData = loginVal(req.body)
         if(cekData.message.length > 0){
@@ -38,11 +37,11 @@ const loginControl = async(req,res) => {
             token : jsonwebtoken,
             data : result,
             message : "Login Berhasil",
-        }) 
-        } catch (error) {
-            logger.error("Terjadi Kesalahan Pada Server")
-            return res.status(500).send("Terjadi Kesalahan Pada Server")
-    }
+        })
+    //     catch (error) {
+    //         logger.error("Terjadi Kesalahan Pada Server")
+    //         return res.status(500).send("Terjadi Kesalahan Pada Server")
+    // }
 }
 
 module.exports = {loginControl}

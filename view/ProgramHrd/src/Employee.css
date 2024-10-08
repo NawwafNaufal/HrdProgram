@@ -1,0 +1,146 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap');
+
+/* Styling Search Input */
+.search-input {
+    max-width: 300px;
+    margin-top: 20px;
+    width: 100%; /* Allow full width for smaller screens */
+}
+
+.input-search {
+    border-radius: 10px;
+}
+
+/* Table Styling */
+.mdb-table {
+    border-color: #343a40 !important;
+    width: 100%; /* Ensure table uses full width */
+}
+
+.mdb-table th,
+.mdb-table td {
+    border-color: #343a40 !important;
+    padding: 15px;
+}
+
+/* Small Category Dropdown */
+div select.form-select.small-dropdown {
+    font-size: 12px;
+    padding: 8px 10px;
+    max-width: 100px;
+    margin-left: 80px; /* Position unchanged */
+    margin-top: -20px;
+    height: auto;
+}
+
+/* Button Add Styling */
+.button-add {
+    margin-top: -60px;
+    margin-left: 1120px; /* Maintain placement */
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
+
+/* Name Table Styling */
+.name-table {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+/* Search Input Focused State */
+.search-input .form-control {
+    border: 1px solid black;
+}
+
+.search-input .form-control:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+.search-input .input-group-text {
+    border: 1px solid black;
+}
+
+/* Category Line Styling */
+.category-line {
+    border: 1px solid black;
+    font-family: 'Inter', sans-serif;
+    margin-left: 70px !important; /* Keep position */
+}
+
+.mb-3 .form-select.category-line {
+    border: 1px solid black;
+    color: #000;
+}
+
+.mb-3 .form-select.category-line:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+/* Action Column Styling */
+.action-column {
+    padding-right: 0 !important;
+}
+
+/* Rows Name Styling */
+.rows-name {
+    margin-top: 10px !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    margin-left: 20px; /* Keep position */
+}
+
+/* Custom Select Styling */
+.custom-select {
+    border-width: 2px;
+    border-color: #b8b8b8;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* Responsive Styling for PC */
+@media (min-width: 769px) {
+    .search-input {
+        max-width: 300px; /* Maintain max-width */
+    }
+
+    .button-add {
+        margin-left: 1120px; /* Maintain original placement */
+    }
+
+    div select.form-select.small-dropdown {
+        margin-left: 80px; /* Keep margin */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .search-input {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-left: 10px; /* Maintain some margin */
+    }
+
+    .button-add {
+        margin-left: 0; /* Adjust for smaller screens */
+        justify-content: center; /* Center button if necessary */
+        margin-top: 10px; /* Maintain spacing */
+    }
+
+    div select.form-select.small-dropdown {
+        margin-left: 10px; /* Adjust for smaller screens */
+        max-width: 100%; /* Full width */
+    }
+
+    .category-line {
+        margin-left: 10px; /* Adjust for consistent spacing */
+    }
+}
+.new-add{
+    font-family: 'Poltawski Nowy';
+}

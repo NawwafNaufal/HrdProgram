@@ -1,0 +1,31 @@
+.mdb-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .mdb-table thead th {
+    background-color: #222222 !important;
+    color: #fff !important;
+  
+  }
+  
+  .mdb-table th {
+    background-color: #343a40; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black; /* Border hitam untuk header */
+  }
+  
+  .mdb-table th:first-child {
+    width: 50px; /* Lebar untuk kolom nomor */
+    border-top-left-radius: 5px; /* Radius pada sudut kiri atas */
+    border-bottom-left-radius: 5px;
+  }
+  .mdb-table th:last-child {
+    border-top-right-radius: 5px; /* Radius pada sudut kanan atas */
+    border-bottom-right-radius: 5px; /* Radius pada sudut kanan bawah */
+  }
+  
+  .mdb-table th:nth-child(2) {
+    width: 200px; /* Lebar untuk kolom nama karyawan */
+  }

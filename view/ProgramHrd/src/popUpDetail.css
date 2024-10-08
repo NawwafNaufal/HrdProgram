@@ -1,0 +1,142 @@
+/* General popup overlay and container */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-container {
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px;
+    width: 700px; /* Width to fit the original image size */
+    padding: 20px;
+    height: auto; /* Allow height to adjust based on content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Profile Section */
+.popup-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-section {
+    flex-basis: 30%; /* Adjusted size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    border-right: 1px solid #ddd; /* Border for separation */
+}
+
+.profile-img {
+    width: 100px; /* Profile image width */
+    height: 100px; /* Adjusted height */
+    border-radius: 50%; /* Circular profile */
+    margin-bottom: 20px;
+}
+
+.employee-info {
+    text-align: center;
+}
+
+.employee-info h2 {
+    font-size: 22px; /* Title size */
+    margin: 0;
+    font-weight: bold;
+    color: #333; /* Title color */
+}
+
+.employee-info p {
+    margin: 5px 0;
+    font-size: 14px; /* Info size */
+    color: #555; /* Info color */
+}
+
+/* Right Section */
+.right-section {
+    flex-basis: 70%; /* Adjusted size */
+    padding-left: 20px;
+}
+
+.education-job p {
+    font-size: 14px; /* Small text size */
+    margin: 5px 0;
+}
+
+.education-job strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Details section */
+.popup-details h3 {
+    font-size: 18px; /* Header size */
+    margin-bottom: 15px;
+    color: #333; /* Header color */
+    border-bottom: 2px solid #ddd; /* Underline */
+    padding-bottom: 5px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 15px;
+}
+
+.details-grid div {
+    background-color: #f9f9f9; /* Background for details */
+    padding: 10px;
+    border: 1px solid #ddd; /* Border for details */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.details-grid p {
+    margin: 5px 0;
+    font-size: 14px; /* Text size */
+    color: #555; /* Text color */
+}
+
+.details-grid p:first-child {
+    font-weight: bold; /* Bold for first child */
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-container {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .popup-content {
+        flex-direction: column; /* Stack content */
+    }
+
+    .right-section {
+        padding-left: 0; /* Remove padding */
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

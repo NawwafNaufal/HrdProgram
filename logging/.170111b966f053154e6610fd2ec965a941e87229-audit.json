@@ -9,6 +9,26 @@
             "date": 1726042113664,
             "name": "C:\\ProgramHrd\\logging\\application-2024-09-11-15.log",
             "hash": "743614750360448dc5071025d3281a996b8fc3138c0ddb83f0d46f93a02d7f0c"
+        },
+        {
+            "date": 1726107562210,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-12-09.log",
+            "hash": "a345457ffb1f176e9670bddcda1c6f7321bf6e5b40b53021d7d72970d2afc9b1"
+        },
+        {
+            "date": 1726121409592,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-12-13.log",
+            "hash": "21503ef68483c2225674681fd0b13c0ff18c9f3b502cef6a7f5800c5b6d8fe29"
+        },
+        {
+            "date": 1726124420499,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-12-14.log",
+            "hash": "b6f7cd6d3c0415a51b61d2f7a462c49b8000196b9792ea51f18a6c3fada0c523"
+        },
+        {
+            "date": 1726128940834,
+            "name": "C:\\ProgramHrd\\logging\\application-2024-09-12-15.log",
+            "hash": "5c1f032ed3d7a8997de9dfa7a28b3359008b83fe442d485eb98f82ce10b5394c"
         }
     ],
     "hashType": "sha256"
