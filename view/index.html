@@ -1,31 +1,120 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Manajemen Inventaris</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Aplikasi Manajemen Inventaris</h1>
-        
-        <form id="itemForm">
-            <input type="text" id="itemName" placeholder="Nama Barang" required>
-            <input type="number" id="itemQuantity" placeholder="Jumlah" required>
-            <select id="transactionType">
-                <option value="in">Masuk</option>
-                <option value="out">Keluar</option>
-            </select>
-            <button type="submit">Tambah Item</button>
-        </form>
+<!-- import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import './EmployeeForm.css';
 
-        <div id="inventoryStatus" class="status"></div>
+const EmployeeForm = ({ resetFormState }) => {
+    const [isActive, setIsActive] = useState(true);
+    const [isHidden, setIsHidden] = useState(false);
 
-        <h2>Daftar Inventaris</h2>
-        <ul id="inventoryList"></ul>
-    </div>
+    useEffect(() => {
+        if (isHidden) {
+            resetFormState();
+        }
+    }, [isHidden, resetFormState]);
 
-    <script src="app.js"></script>
-</body>
-</html>
+    const handleBack = () => {
+        setIsActive(false);  // Mulai animasi slide-down
+        setTimeout(() => {
+            setIsHidden(true);  // Sembunyikan form setelah animasi selesai
+        }, 500);  // Durasi animasi sinkron dengan CSS
+    };
+
+    return (
+        <div>
+            {!isHidden && (
+                <div className={`slide-up-form ${isActive ? 'active' : ''}`}>
+                    <div className="employee-form-container mt-4">
+                        <div className="d-flex justify-content-between align-items-center mb-3">
+                            <button className="btn btn-light back-button" onClick={handleBack}>Back</button>
+                            <h2>Employee Form</h2>
+                            <button className="btn btn-dark submit-button">Submit</button>
+                        </div>
+
+                        <div className="row">
+                            {/* Personal Data Section */}
+                            <div className="col-md-6">
+                                <div className="card p-3">
+                                    <h4 className="section-title">Personal Data</h4>
+                                    <div className="mb-3">
+                                        <label htmlFor="nik" className="form-label">NIK</label>
+                                        <input type="text" className="form-control" id="nik" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="status" className="form-label">Status</label>
+                                        <select className="form-select" id="status">
+                                            <option value="">Pilih Status</option>
+                                            <option value="aktif">Aktif</option>
+                                            <option value="tidak aktif">Tidak Aktif</option>
+                                        </select>
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="name" className="form-label">Nama</label>
+                                        <input type="text" className="form-control" id="name" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="education" className="form-label">Pendidikan</label>
+                                        <input type="text" className="form-control" id="education" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="birthdate" className="form-label">Tanggal Lahir</label>
+                                        <input type="date" className="form-control" id="birthdate" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="phone" className="form-label">No Hp</label>
+                                        <input type="text" className="form-control" id="phone" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Employee Data Section */}
+                            <div className="col-md-6">
+                                <div className="card p-3">
+                                    <h4 className="section-title">Employee Data</h4>
+                                    <div className="mb-3">
+                                        <label htmlFor="type" className="form-label">Jabatan</label>
+                                        <select className="form-select" id="position">
+                                            <option value="">Pilih Jabatan</option>
+                                            <option value="manager">Manager</option>
+                                            <option value="staff">Staff</option>
+                                        </select>
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="contractStatus" className="form-label">Status Kontrak</label>
+                                        <select className="form-select" id="contractStatus">
+                                            <option value="">Pilih Status Kontrak</option>
+                                            <option value="kontrak">Kontrak</option>
+                                            <option value="permanen">Permanen</option>
+                                        </select>
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="contractDetails" className="form-label">Keterangan Kontrak</label>
+                                        <input type="text" className="form-control" id="contractDetails" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="startDate" className="form-label">Awal Kontrak</label>
+                                        <input type="date" className="form-control" id="startDate" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="endDate" className="form-label">Akhir Kontrak</label>
+                                        <input type="date" className="form-control" id="endDate" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+// Validasi props
+EmployeeForm.propTypes = {
+    resetFormState: PropTypes.func.isRequired,
+};
+
+export default EmployeeForm; -->
+
+
+
+<!-- Css -->
