@@ -65,18 +65,18 @@ const putPersonalData = async (req,res) => {
 
 const deletePersonalData = async (req,res) => {
     try {
-        const {id} = req.params
-        const result = await form.deletePersonalData(id)
+        const { id } = req.params; // Mengambil ID dari parameter URL
+        const result = await form.deleteData(id); // Menghapus data dari kedua tabel
         res.status(200).json({
-            data : result,
-            message : "Data Telah Di Hapus"
-        }) 
-    } catch (error) {
-        logger.error(`Ada Masalah Dengan Sistem: ${error.message}`, {error : error.stak})
+          data: result,
+          message: "Data Telah Dihapus",
+        });
+      } catch (error) {
+        logger.error(`Ada Masalah Dengan Sistem: ${error.message}`, { error: error.stack });
         res.status(500).json({
-            message : "Ada Masalah di Server "
-        })
-    }
+          message: "Ada Masalah di Server",
+        });
+      }
 }
 
 

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { kategoriAbsenControl } = require('../controller/kategoriAbsenControl');
-const { postAbsenControl } = require('../controller/AbsenControl');
+const { postAbsenControl,putAbsenControl } = require('../controller/AbsenControl');
 
-router.route("/").post(kategoriAbsenControl).post(postAbsenControl);
+router.route("/:id").put(putAbsenControl);
+router.route("/").get(postAbsenControl);
 
 module.exports = router;

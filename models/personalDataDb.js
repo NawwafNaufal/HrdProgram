@@ -1,10 +1,5 @@
 const db = require("../config/connection")
 
-const getDataEmployee = () => {
-    const query = "SELECT * FROM personal_data "
-        return db.execute(query)
-}
-
 const postDataEmployee =async (
             nik,nama_karyawan,jenis_kelamin,pendidikan,id_status,
             tanggal_lahir,alamat,no_hp,usia,asal
@@ -35,10 +30,27 @@ const putPersonalData = (
     return db.execute(query,value)
 }
 
-const deletePersonalData = (id) => {
-    const query = "DELETE FROM personal_data WHERE id = ?  "
-    return db.execute(query,[id])
-}
+const deleteData = async (id) => {
+    const connection = await db.getConnection(); // Mendapatkan koneksi dari pool
+    try {
+      await connection.beginTransaction(); // Memulai transaksi
+  
+      // Hapus dari personal_data
+      await connection.execute("DELETE FROM employee_data WHERE id = ?", [id]);
+      
+      // Hapus dari employee_data
+      await connection.execute("DELETE FROM personal_data WHERE id = ?", [id]);
+  
+      await connection.commit(); // Menyimpan perubahan
+      return { success: true }; 
+    } catch (error) {
+      await connection.rollback(); // Mengembalikan perubahan jika ada kesalahan
+      throw error; // Meneruskan kesalahan
+    } finally {
+      connection.release(); // Melepaskan koneksi
+    }
+  };
+  
 
 
-module.exports = {getDataEmployee,postDataEmployee,putPersonalData,deletePersonalData}
+module.exports = {postDataEmployee,putPersonalData,deleteData}

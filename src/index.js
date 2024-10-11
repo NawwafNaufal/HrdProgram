@@ -20,6 +20,7 @@ app.use("/Absen",require("../routes/absenRoute"))
 app.use("/DataKaryawan",require("../routes/tabelKarywan"))
 app.use("/FullDAta",require("../routes/allDataKaryawan"))
 app.use("/Kategori",require("../routes/kategoriAbsenRoute"))
+app.use("/TotalEmployee",require("../routes/totalEmployee"))
 
 
 app.listen(PORT,()=> {

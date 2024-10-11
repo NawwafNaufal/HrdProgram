@@ -6,11 +6,6 @@ const getDataControl =async (req,res,next) => {
             message : "Data Karyawan",
             data : result
         })
-        const user = result[0]
-        const payload = {
-            nama : user.nama_karyawan
-        }
-        console.log(payload)
         next()
 }
 
