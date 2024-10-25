@@ -22,17 +22,17 @@ const loginControl = async(req,res) => {
                 })
             }
                 const user = result[0]
-                if(password !== user.password){
-                    return res.json({
-                        message : "Kata sandi anda salah Coy"
-                    })
-                }
                 const payload = {
                     username : user.username
                 }
                 const jwtExpired = 60 * 60 * 1
                 const jsonwebtoken = jwt.sign(payload,keytoken,{expiresIn : jwtExpired})
                 console.log(jsonwebtoken)
+                if(password !== user.password){
+                    return res.status(400).json({
+                        message : "Kata sandi anda salah Coy"
+                    })
+                }
         return res.status(200).json({
             token : jsonwebtoken,
             data : result,

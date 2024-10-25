@@ -21,6 +21,11 @@ app.use("/DataKaryawan",require("../routes/tabelKarywan"))
 app.use("/FullDAta",require("../routes/allDataKaryawan"))
 app.use("/Kategori",require("../routes/kategoriAbsenRoute"))
 app.use("/TotalEmployee",require("../routes/totalEmployee"))
+app.use("/LogAbsensi",require("../routes/logAbsensiRoute"))
+app.use("/LogAbsensiTotal",require("../routes/logTotalRoute"))
+app.use("/Detail",require("../routes/detailRoute"))
+app.use("/Gaji",require("../routes/gajiRoute"))
+
 
 
 app.listen(PORT,()=> {

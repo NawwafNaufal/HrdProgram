@@ -1,10 +1,8 @@
 const db = require("../config/connection")
 
 const getDataKarywanDb = () => {
-    const query = `SELECT personal_data.id, personal_data.nama_karyawan, personal_data.nik,j.jabatan,
-                    personal_data.jenis_kelamin,personal_data.no_hp,personal_data.alamat
-                    FROM personal_data JOIN employee_data ed on personal_data.id = ed.id_personal_data
-                    JOIN jabatan j on j.id = ed.jabatan`
+    const query = `SELECT de.id, de.nama_karyawan,de.nik,jabatan.jabatan,de.jenis_kelamin,de.alamat 
+                    FROM data_employee de JOIN jabatan ON (de.jabatan = jabatan.id);`
         return db.execute(query)
         
 }

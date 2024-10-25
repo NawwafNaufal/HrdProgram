@@ -1,39 +1,41 @@
-const form = require("../models/personalDataDb")
+const form = require("../models/dataEmployeeDb")
 const logger = require("../logs/winston")
 const flatpickr = require("flatpickr")
 // const validate = require("../validation/validateForm")
 
-const getPersonalData = async (req,res) => {
-    try {
-        const result = await form.getDataEmpployee()
-            res.status(200).json({
-                data : result,
-                message : "Data Employee"
-            }) 
-    } catch (error) {
-        logger.error(`Ada Masalah Dengan Sistem: ${error.message}`, {error : error.stak})
-        res.status(500).json({
-            message : "Ada Masalah di Server "
-        })
-    }
-}
 
 const postPersonalData = async (req,res) => {
-    const  {nik,nama_karyawan,jenis_kelamin,pendidikan,id_status,
-            tanggal_lahir,alamat,no_hp,usia,asal
+    const {nik,nama_karyawan,jenis_kelamin,pendidikan,id_status,
+        tanggal_lahir,
+        alamat,no_hp,usia,asal,jabatan,bagian,
+        kelompok,kontrak,keterangan_kontrak,bpjs_kategori,
+        awal_kontrak,akhir_kontrak,mulai_kerja,akhir_kerja,
+        kpj,
+        kode_bag,nik_kerja,id_jenis
     } = req.body
+
+    // if (!tanggal_lahir || !awal_kontrak || !akhir_kontrak || !mulai_kerja || !akhir_kerja) {
+    //     return res.status(400).json({
+    //         message: "Tanggal tidak boleh kosong."
+    //     });
+    // }
+    
     try {
         logger.info("Data Karyawan Telah Di Tambahkan")
         const [result] = await form.postDataEmployee(
-            nik,nama_karyawan,jenis_kelamin,
-        pendidikan,id_status,tanggal_lahir,
-            alamat,no_hp,usia,asal)
-        res.status(200).json({
+            nik,nama_karyawan,jenis_kelamin,pendidikan,id_status,
+            tanggal_lahir,
+            alamat,no_hp,usia,asal,jabatan,bagian,
+            kelompok,kontrak,keterangan_kontrak,bpjs_kategori,
+            awal_kontrak,akhir_kontrak,mulai_kerja,akhir_kerja,
+            kpj,
+            kode_bag,nik_kerja,id_jenis)
+        res.status(201).json({
             data : result,
             message : "Data Berhasil ID Tambahkan"
         })
     } catch (error) {
-        logger.error(`Ada Masalah Dengan Sistem: ${error.message}`, {error : error.stak})
+        logger.error(`Ada Masalah Dengan Sistem: ${error.message}`, {error : error.stack})
         res.status(500).json({
             message : "Ada Masalah di Server "
         })
@@ -43,14 +45,20 @@ const postPersonalData = async (req,res) => {
 const putPersonalData = async (req,res) => {
     try {
         const {nik,nama_karyawan,jenis_kelamin,pendidikan,id_status,
-                tanggal_lahir,alamat,no_hp,usia,asal,
+                tanggal_lahir,alamat,no_hp,usia,asal,jabatan,bagian,
+                kelompok,kontrak,keterangan_kontrak,bpjs_kategori
+                ,awal_kontrak,akhir_kontrak,mulai_kerja,akhir_kerja,kpj,
+                kode_bag,nik_kerja,id_jenis
             } = req.body
         logger.info("Data Karyawan Telah Di Tambahkan")
         const {id} = req.params
         const [result] = await form.putPersonalData(
             nik,nama_karyawan,jenis_kelamin,
         pendidikan,id_status,tanggal_lahir,
-            alamat,no_hp,usia,asal,id)
+            alamat,no_hp,usia,asal,jabatan,bagian,
+            kelompok,kontrak,keterangan_kontrak,bpjs_kategori
+            ,awal_kontrak,akhir_kontrak,mulai_kerja,akhir_kerja,kpj,
+            kode_bag,nik_kerja,id_jenis,id)
         res.status(201).json({
             data : result,
             message :"Data Telah Di Update"
@@ -81,5 +89,5 @@ const deletePersonalData = async (req,res) => {
 
 
 
-module.exports = {getPersonalData,postPersonalData,putPersonalData,deletePersonalData}
+module.exports = {postPersonalData,putPersonalData,deletePersonalData}
 

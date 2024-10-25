@@ -16,12 +16,14 @@ const postAbsenControl = async (req, res) => {
     }
 };
 
-// Update absen data (for submission)
 const putAbsenControl = async (req, res) => {
-    const { id_status } = req.body;
+    const { id_status,tanggal } = req.body;
     const { id } = req.params;
+
+    console.log("ID:", id);  
+    console.log("Body:", req.body); 
     try {
-        await absen.putDb(id_status, id);
+        await absen.putDb(id_status,tanggal, id);
         res.status(200).json({
             message: "Absen updated successfully",
         });
