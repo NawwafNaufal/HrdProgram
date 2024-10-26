@@ -25,6 +25,7 @@ app.use("/LogAbsensi",require("../routes/logAbsensiRoute"))
 app.use("/LogAbsensiTotal",require("../routes/logTotalRoute"))
 app.use("/Detail",require("../routes/detailRoute"))
 app.use("/Gaji",require("../routes/gajiRoute"))
+app.use("/SlipGaji",require("../routes/slipGaji"))
 
 
 
